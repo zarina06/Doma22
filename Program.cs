@@ -43,6 +43,107 @@ Console.WriteLine("Ошибка");
 */
 
 
+// Домашняя работа 3.
+// Здадача 1.Напишите программу, которая на вход принимает пятизначное число и проверяет, является ли оно палиндромом.
+/*
+Console.WriteLine("Введите число: ");
+string number = Console.ReadLine();
+int Ien = number . Length;
+
+if ( Ien == 5 )
+
+{  
+
+      if ( number[0] == number[4] && number[1] == number[3] )
+
+      {
+          Console.WriteLine ( $" {number} - Палиндром" );
+   }
+   else
+   {
+     
+     Console.WriteLine ( $" {number} - НЕ палиндром" );
+
+   } 
+ }
+else
+ {
+
+    Console.WriteLine( $"ОШИБКА: {number} - не является пятизначным " );
+  }
+
+*/
+// Задача 2.Напишите программу, которая принимает на вход число (N)  и выдает таблицу кубов чисел от 1 до N.
+/*
+
+int i = 1;
+Console.WriteLine("Ввeдите число N");
+int N = int.Parse(Console.ReadLine());
+Console.WriteLine("Число" + "\t" + "Куб");
+for (i=1; i<= N;i++)
+{
+ Console.WriteLine( i +"\t" + i* i* i );
+}
+*/
+// Задача 3. Напишите программу, которая принимает на вход коородинаты двух точек и находит расстояние между ними в 3D пространстве.
+/*
+
+
+Console.WriteLine("Введите значение x1");
+double x1 =
+double.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение  x2");
+double x2 =
+double.Parse(Console.ReadLine());
+Console.WriteLine("Введете значение у1");
+double y1 = 
+double.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение y2");
+double y2 =
+double.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение z1");
+double z1 =
+double.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение z2");
+double z2 = 
+double.Parse(Console.ReadLine());
+double distance1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1,2) + Math.Pow(z2 - z1,2));
+Console.WriteLine("Расстояние между точками в пространстве 3D:" + distance1);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
