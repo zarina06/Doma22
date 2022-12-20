@@ -111,6 +111,56 @@ double distance1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1,2) + Math.P
 Console.WriteLine("Расстояние между точками в пространстве 3D:" + distance1);
 */
 
+// Домашняя работа 4.
+// Задача 1. Напишите программу, которая  принимает на вход число и выдает сумму цифр в числе.
+/*
+
+Console.WriteLine("Вкдите число:");
+int n  = int.Parse(Console.ReadLine());
+int i = 0;
+int sum = 0;
+for (i = 0; n >=1; i++)
+ {
+    sum += n % 10;
+    n = n / 10;
+
+ }
+ Console.WriteLine("Суммф цифр в числе ровна" + sum);
+ */
+ // Задача 2. Напишите программу, которая задает массив из 8 элементов и выводит их на экран.
+ /*
+
+ int[] array = {1,2,3,4,5,6,7,8};
+ for (int i = 0; i < array.Length; i++)
+ {
+   // Console.WriteLine((array[i]));
+    Console.WriteLine((   array[i] + " " ));
+ }
+*/
+// Задача 3. Напишите цикл, который принимает на вход два числа ( A и B) и возводит числа A  в натуральную степень B.
+Console.WriteLine("Введите число A");
+int A = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите число B");
+int B = int.Parse(Console.ReadLine());
+
+int S = 1;
+for (int i = 1; i <=B; i++)
+{
+    S*=A;
+}
+Console.WriteLine(S);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
