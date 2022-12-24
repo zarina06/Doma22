@@ -138,6 +138,7 @@ for (i = 0; n >=1; i++)
  }
 */
 // Задача 3. Напишите цикл, который принимает на вход два числа ( A и B) и возводит числа A  в натуральную степень B.
+/*
 Console.WriteLine("Введите число A");
 int A = int.Parse(Console.ReadLine());
 
@@ -150,6 +151,66 @@ for (int i = 1; i <=B; i++)
     S*=A;
 }
 Console.WriteLine(S);
+*/
+
+// Домашняя работа 5.
+
+// Задача 1. Задайте массив вещественных чисел, найдите разницу между максимальным и минимальным элементов массива.
+/*
+ 
+ int[] array = { 2,3,4,5,6,7,8,9,10,20};
+ int max = array[0];
+ int min = array [0];
+
+ for (int j = 0; j < array.Length;j++)
+{
+    if (array[j] > max ) max = array[j];
+    if (array[j] < min ) min = array[j];
+}
+Console.WriteLine();
+Console.Write("Разницу между максимальным и минимальным элементом равна - " );
+Console.Write( max - min);
+*/
+// Задача 2. Задайте одномерный массив, заполненные случайными числами , найдите сумму элементов , стоящих на нечетных позициях.
+/*
+
+
+int[] array = new int[30];
+int count  = 0;
+
+for (int i = 0;  i < array.Length; i++)
+{
+    array[i] = new Random().Next(0, 100);
+    Console.WriteLine(array[i] +" ");
+}
+for(int j = 0; j < array.Length; j++);
+{
+
+}
+Console.WriteLine();
+Console.Write("Сумма чисел стоящих на нечетной позиции в массиве равна -");
+Console.Write(count); 
+*/
+
+    
+// Задача 3. Задайте массив заполненный случайными положительными трехзначными числами. Напишите программу, которое покажет количество четных чисел в массиве.
+/*
+
+int[] array = new int [12];
+int countEven = 0;
+for(int i = 0; i< array.Length; i++)
+{
+    array[i]=new Random().Next(100,999);
+    Console.WriteLine(array[i] +" ");
+}
+Console.WriteLine();
+for (int j = 0; j < array.Length; j++)
+{
+   if (array[j] %2 ==0) countEven = countEven +1;
+}
+Console.Write("Четные числа из массива:" + countEven);
+*/
+
 
 
 
