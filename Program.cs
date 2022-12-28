@@ -210,8 +210,100 @@ for (int j = 0; j < array.Length; j++)
 }
 Console.Write("Четные числа из массива:" + countEven);
 */
+// Домашняя работа 6.
+
+// Задача 1. Напишите программу, которая найдет точку пересечения двух прямых, заданных уравнениями y = k1* x +b1, y =k2* x+b2
+/*
+
+Console.WriteLine("Введите значение k1");
+double k1 = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение k2");
+double k2 = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение b1");
+double b1 = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение b2");
+double b2 = double.Parse(Console.ReadLine());
+
+if(k1==k2 && b1!=b2)
+{
+  Console.WriteLine("Две прямые параллельны");
+}
+else if(k1==k2 && b1==b2)
+{
+
+    Console.WriteLine("Две прямые совпадают");
+
+}
+else
+
+{
+  double x = (b2-b1)/(k1 - k2);
+  double y = k1* x + b1;
 
 
+  Console.WriteLine($" Две прямые пересекаются в точке с координатами X:(x),Y(y)");
+
+   
+}
+*/
+
+// Задача 2. Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввел пользователь.
+
+Console.WriteLine("Введите числа:");
+string numbers = Console.ReadLine();
+// нам нужно перебрать каждый элемент строки, если это запятая или пробел делаем ++
+string[] newNumbers = new string
+[numbers.Length];
+int k = 0;
+for(int i = 0; i< newNumbers.Length; i++)
+{
+    if (numbers[i] ==',' )
+{
+   k++; 
+}
+else
+{
+    newNumbers[k]= newNumbers[k] + $"{numbers[i]}";
+}
+}
+k++;
+int[]resultNumbers = new int[k];
+PrintArray(resultNumbers,newNumbers);
+int sum =0;
+for (int i = 0; i <k; i++)
+{
+  
+  if(resultNumbers[i]>0)
+  {
+    sum++;
+  }
+
+}
+ Console.WriteLine(" Количество чисел больше 0" +sum);
+  void PrintArray (int[] array, string[] string1)
+  {
+for (int i =0; i < array.Length;i++)
+{
+    array[i]= Convert.ToInt32(string1[i]);
+    Console.Write(array[i]+ " ");
+}
+
+Console.WriteLine();
+
+  }
+
+
+
+ 
+  
+  
+
+  
+
+
+    
+
+  
 
 
 
