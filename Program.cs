@@ -248,6 +248,7 @@ else
 */
 
 // Задача 2. Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввел пользователь.
+/*
 
 Console.WriteLine("Введите числа:");
 string numbers = Console.ReadLine();
@@ -291,18 +292,150 @@ for (int i =0; i < array.Length;i++)
 Console.WriteLine();
 
   }
+  */
+  // Домашняя работа 7.
 
+  // Задвча 1. Задайте двумерный массив m*n, заполненный случйными вещественными числами.
+  /*
+
+  void FiIIArray (double[,]array)
+  {
+     for( int i = 0; i < array.GetLength(0); i++) 
+     {
+        for( int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i,j] = new
+      Random().NextDouble();
+        }
+     } 
+  }
+void PrintArray (double[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i ++)
+    {
+      for(int j = 0; j < array.GetLength(1); j ++)  
+      {
+Console.Write($"{array[i,j]}");
+    }
+ } 
+}  
+int m = 5;
+int n = 4;
+double[,]array = new double[ m,n];
+FiIIArray(array);
+PrintArray(array);
+*/
+ // Задача 2.Задайте двумерный массив из целых чисел.Найдите среднее арифметическое элементов в каждом столбце.
+ /*
+
+ void FiIIArray(int[,]array)
+ {
+    for(int m = 0; m<array.GetLength(0);m++)
+    {
+        for(int n = 0; n<array.GetLength(1);n++)
+        {
+           array[m,n] = new Random().Next(1,20);
+        }
+    }
+ }
+void PrintArray(int[,]array)
+{
+    for(int m = 0 ; m<array.GetLength(0);m++)
+    {
+        for(int n = 0 ; n<array.GetLength(1);n++)
+        {
+            Console.Write($"{array[m,n]} ");
+        }
+    }
+}
+string ArithmeticMean(int[,]array)
+{
+    string result= string.Empty;
+    for(int n = 0; n < array.GetLength(1); n++)
+  {
+   int sum = 0;
+   int count = 0;
+   double mean = 0;
+   for(int m =0; m < array.GetLength(0); m ++)
+{
+    sum += array[m,n];
+    count++;
+
+}
+mean = sum/count;
+result+=mean.ToString() +" ";
+
+}
+return result;
+}
+int m = 5;
+int n= 5;
+int[,] array = new int[m,n];
+
+
+FiIIArray(array);
+PrintArray(array);
+Console.WriteLine();
+Console.WriteLine(ArithmeticMean(array));
+*/
+// Задача3. Напишите программу которая на вход принимает позиции элемента в двумерном массиве и возвращает значение этого элемента или же указание что этого элемента нет.
+/*
+ 
+ void FiIIArray(int[,]array)
+ {
+    for(int m = 0;  m< array.GetLength(0);m++)
+    {
+        for(int n = 0; n< array.GetLength(1); n++)
+        {
+            array[m,n]= new Random().Next(1,20);
+
+        }
+    }
+ }
+ void PrintArray(int[,]array)
+ {
+    for(int m = 0;m<array.GetLength(0);m++)
+    {
+        for(int n = 0;n<array.GetLength(1);n++)
+        {
+           Console.Write($"{array[m,n]} ");
+        }
+        Console.WriteLine();
+
+    }
+ }
+int m = 5;
+int n = 5;
+int[,] array = new int[m,n];
+
+FiIIArray(array);
+PrintArray(array);
+ 
+Console.WriteLine(" Введите число");
+int num = int.Parse(Console.ReadLine());
+string Position(int[,]array)
+{
+    string result = string.Empty;
+    for(int m = 0; m <array.GetLength(0);m++)
+    {
+        for(int n =0; n<array.GetLength(1);n++)
+
+        {
+            if(num ==array[m,n]) result += $"{m},{n}";
+
+        }
+    }
+    if (result==string.Empty) result = "Такого элемента нет";
+       return result;
+
+
+}
+Console.WriteLine(Position(array));
+  */
+    
 
 
  
-  
-  
-
-  
-
-
-    
-
   
 
 
