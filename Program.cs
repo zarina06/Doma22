@@ -430,9 +430,201 @@ string Position(int[,]array)
 
 
 }
-Console.WriteLine(Position(array));
+Console.WriteLine(Position(array))
+*/
+
+
+
+                  // Домашняя работа 8.
+
+
+  // Задача 1. Задайте двумерный массив. Напишите программу, которая упорядочит по убиванию элементы каждой строки двумерного массива.
+  /*
+
+
+   int[,] table = new int[3,4];
+   FillArrayRandom(table);
+   PrintArray(table);
+   SortTolower(table);
+   Console.WriteLine();
+   PrintArray(table);
+
+   //Функция заполнения массива рандомно числами от 1 до 9
+   void FillArrayRandom(int[,] array)
+   {
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+        array[i,j] = new Random().Next(1,10);
+      }
+    }
+   }
+// Функция сортировки элементов в строке двумерного массива, по убиванию 
+void SortTolower(int[,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+{
+  for(int j = 0; j < array.GetLength(1); j++)
+{
+for (int k = 0; k < array.GetLength(1) -1; k++)
+{
+  if(array[i,k] < array[i,k + 1])
+  {
+    int temp = array[i, k + 1];
+    array[i, k + 1]= array[i,k];
+    array[i,k] = temp;
+  }
+  }
+ }
+ }
+}
+ // Функция вывода двумерного  массива
+ void PrintArray(int[,] array)
+ {
+  for(int i = 0; i < array.GetLength(0); i++)
+  {
+    for(int j = 0; j < array.GetLength(1); j++)
+    {
+      Console.WriteLine($" {array[i,j]}");
+    }
+    Console.WriteLine();
+  }
+ }
+*/
+// Задача 2. Задайте прямоугольный двумерный массив.Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+/*
+
+int[,] table = new int [4,4];
+FillArrayRandom(table);
+PrintArray(table);
+Console.WriteLine();
+NumberRowMinSumElements(table);
+
+//Функция вывода  номера строки ( не индекса) с наименьшей суммой элементов 
+
+void
+NumberRowMinSumElements(int[,] array)
+{
+  int minRow = 0;
+  int minSumRow = 0;
+  int sumRow = 0;
+  for (int i = 0; i < table.GetLength(1); i++)
+  {
+    minRow += table[0,i];        
+  }
+  for(int i = 0; i < table.GetLength(0); i++)
+{
+for(int j = 0; j < table.GetLength(1); j++) sumRow +=table[i,j];
+if (sumRow < minRow)
+{
+  minRow = sumRow;
+  minSumRow = 1;
+}
+sumRow = 0;
+}
+Console.Write($"{ minSumRow +1} строка");
+}   
+// функция вывода двумерного массива 
+void PrintArray(int[,]array)
+{
+  for (int  i = 0; i < array.GetLength(0); i++)
+  {
+    for(int j = 0; j <array.GetLength(1); j++)
+    {
+     Console.Write($" { array [i,j]} ");
+    }
+    Console.WriteLine();
+  }
+}
+
+  //Функция заполнения массива рандомно числами от 1 до 9
+  void FillArrayRandom(int[,]array)
+  {
+    for (int i = 0; i <  array.GetLength(0); i++)
+    {
+    for(int j =0; j < array.GetLength(1); j++)
+    {
+      array[i,j] = new
+      Random().Next(1,10);
+    }
+    }
+  }
   */
-    
+  //Задача 3.Задайте две матрицы, напишите программу которая будет находить произведение двух матриц.
+  /*
+
+  Console.WriteLine("Введите размер матриц и диопозон случайных значений");
+  int m = inputNumbers("Введите число строк 1-й матрицы:");
+  int n = inputNumbers("Введите число столбцов 1-й матрицы ( и строк 2-й) ");
+  int p = inputNumbers("Введите число 2-й матрицы: ");
+  int range = inputNumbers("Введите диопозон случайных чисел: от 1 до");
+
+  int[,] firstMartrix = new int[ m,n ];
+  CreateArray(firstMartrix);
+  Console.WriteLine($"Первая матрица:");
+  WriteArray(firstMartrix);
+
+  int[,] secomdMartrix = new int[n,p];
+  CreateArray(secomdMartrix);
+  Console.WriteLine($"Вторая матрица: ");
+  WriteArray(secomdMartrix);
+  
+
+  int[,] resultMatrix = new int[m,p];
+
+  MultipiyMatrix(firstMartrix,secomdMartrix,resultMatrix);
+  Console.WriteLine($"Произведение первой и второй матрицы:");
+  WriteArray(resultMatrix);
+
+void MultipiyMatrix(int[,]fristMartrix,int[,]secomdMartrix, int[,] resultMatrix)
+{
+  for (int i = 0; i < resultMatrix.GetLength(0); i++)
+  {
+    for (int j = 0; j < resultMatrix.GetLength(1); j++)
+    {
+      int sum = 0;
+      for(int k = 0; k < fristMartrix.GetLength(1); k++)
+      {
+        sum +=fristMartrix[i,k]* secomdMartrix[k,j];
+
+      }
+      resultMatrix[i,j] = sum;
+
+    }
+  }
+}
+int inputNumbers(string input)
+{
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
+
+}
+void CreateArray(int[,] array)
+{
+for(int i=0;  i < array.GetLength(0); i++)
+{
+  for(int j=0; j < array.GetLength(1); j++)
+  {
+    array[i,j] = new
+    Random().Next(range);
+  }
+}
+}
+void WriteArray(int[,] array)
+{
+  for(int i=0; i < array.GetLength(0); i++)
+  {
+  for(int j=0; j < array.GetLength(1); j++)
+  {
+    Console.Write(array[i,j] +"");
+  }
+  Console.WriteLine();
+  }
+}
+*/
+
 
 
  
