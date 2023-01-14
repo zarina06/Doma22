@@ -625,6 +625,82 @@ void WriteArray(int[,] array)
 }
 */
 
+                  //Домашняя работа 9.
+  
+  // Задача 1. Задайте значение N. Напишите программу которая выведит все натуральные числа в промежутке от N до 1.
+  /*
+
+  int n = Inputint("Введите  положительное число ");
+  int m = 1;
+  if ( n < 1)
+  {
+    Console.Write("Ввели не положительное число ");
+  }
+  Console.WriteLine(NaturalNumber(n,m));
+  int NaturalNumber(int n,int m)
+  {
+    if ( n==m)
+    return m;
+    else
+
+    Console.Write($" {NaturalNumber(n,m +1)}, ");
+    return m;
+  }
+int Inputint(string output)
+{
+  Console.Write(output);
+  return
+  int.Parse(Console.ReadLine());
+
+}
+*/
+
+   
+// Задача 2.Задайте значение M и N .Напишите программу которая найдет сумму натуральных элементов от M до N.  
+/*
+int m = inputint(" Введите M:");
+int n = inputint(" Введите N:");
+Console.WriteLine($"Сумма элементов от {m} до {n}  =  { CountNaturalSum(m,n)}");
+
+int inputint(string output)
+{
+  Console.Write(output);
+  return
+  int.Parse(Console.ReadLine());
+}
+int CountNaturalSum( int m, int n)
+{
+  if (m==n)
+  return n;
+  return n + CountNaturalSum(m,n -1);
+}
+*/ 
+// Напишите программу вычисления функции Аккермана с помощью рекруссии. Даны не отрицательные числа  m и n.
+
+int Ackerman ( int m ,int n ) 
+{
+  if (m ==0) return (n +1);
+  else if (m==0) return
+  Ackerman(m -1,1);
+  else return Ackerman(m -1, Ackerman (m , n -1));
+}
+Console.WriteLine(" Inputm:");
+int m =
+int.Parse(Console.ReadLine());
+Console.WriteLine(" Input n:");
+int n =
+int. Parse(Console.ReadLine());
+Console.Write($" Значение функции Ackerman( {m} .{n}) равно: ");
+Console.WriteLine(Ackerman(m,n));
+
+
+
+
+
+
+
+
+
 
 
  
